@@ -1,3 +1,31 @@
+"""
+Đặt vấn đề:
+Mỗi cá nhân khi bán mình cho tư bản đều phải đóng 1 khoản
+thuế thu nhập cá nhân được tính dựa trên lương gross của mình.
+
+Diễn giải:
+- Lương gross: lương trừ đi thuế, bảo hiểm, các khoản giảm trừ thuế theo luật.
+
+Thuế thu nhập cá nhân được tính trên phần thu nhập thực nhận
+sau khi đã trừ đi các khoản:
+- Miễn trừ bản thân: 11 * 10^6 (vnd)
+- Người phụ thuộc: 4.4 * 10^6/người (vnd)
+- Bảo hiểm (xã hội, lao động, thất nghiệp): 10.5%/lương gross (vnd)
+
+Người có phần thu nhập tính thuế càng lớn sẽ đóng thuế càng nhiều, cụ thể:
+Bậc	| Thu nhập tính thuế/tháng (triệu đồng)	 |   Thuế suất
+1	| Đến 05	                             |       5 %
+2	| Trên 05 -> 10	                         |      10 %
+3	| Trên 10 -> 18	                         |      15 %
+4	| Trên 18 -> 32	                         |      20 %
+5	| Trên 32 -> 52	                         |      25 %
+6	| Trên 52 -> 80	                         |      30 %
+7	| Trên 80	                             |      35 %
+
+Hãy viết một hàm tính thuế thu nhập cá nhân tương ứng với lương người dùng nhập.
+"""
+
+
 def get_tax(amount: float):
     tax = 0
 

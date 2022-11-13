@@ -1,3 +1,23 @@
+"""
+Đặt vấn đề:
+Tại Việt Nam chúng ta tính giá điện theo bậc thang. 
+Tức sử dụng càng nhiều đơn giá trên một KWh càng tăng.
+
+Hiện tại chúng ta đang có 6 bậc tương ứng với 6 mức giá. 
+Mức giá được diễn giải như sau:
+- Với 50 (kwh) đầu tiên sẽ tính theo đơn gia bậc 1 - 1678vnd/kwh
+- Với 50 (kwh) tiếp theo, giá điện sẽ tính theo bậc 2 - 1734vnd/kwh
+- Tương tự:
+    + Với 100 kwh tiếp theo - Đơn giá bậc 3: 2014 vnd/kwh
+    + Với 100 kwh tiếp theo - Đơn giá bậc 4: 2014 vnd/kwh
+    + Với 100 kwh tiếp theo - Đơn giá bậc 5: 2014 vnd/kwh
+- Sau khi hết số kwh của đơn giá bậc 5, tất cả các kwh tiếp theo
+sẽ có đơn giá: 2927vnd/kwh
+
+Hãy viết một hàm để tính giá tiền điện 
+dựa trên số lượng điện người dùng nhập vào. 
+"""
+
 STAGE_1_PRICE: int = 1678
 STAGE_2_PRICE: int = 1734
 STAGE_3_PRICE: int = 2014

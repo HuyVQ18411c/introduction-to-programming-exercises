@@ -1,3 +1,12 @@
+"""
+Đặt vấn đề:
+Chúng ta đang học trong lớp, 
+và cần một vấn đề nào đó dễ để mở đầu cho buổi học.
+
+Hãy đảo ngược một chuỗi được nhập vào bởi người dùng. 
+Vd: live -> evil
+"""
+
 def reverse_string(my_string: str):
     reversed_string = ''
     for char in my_string:
