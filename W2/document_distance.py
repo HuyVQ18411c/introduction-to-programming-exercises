@@ -27,4 +27,34 @@ Hãy tìm khoảng cách giữa 2 từ (phải đúng thứ tự) cho trước t
 
 SENTENCE: str = 'Học là một người chăm chỉ, anh ấy luôn cố gắng dành thời gian rảnh của mình  để luyện tập những thói quen tốt trong cuộc sống'
 
+def measure_words_distance(sentence: str) -> int:
+    distance: int = 0
+    words_list: list = []
+    temp_word: str = ''
 
+    first_word_index: int = 0
+    last_word_index: int = 0
+    for char in sentence:
+        if char != ' ':
+            temp_word += char
+        else:
+            if temp_word.strip():
+                words_list.append(temp_word)
+            temp_word = ''
+
+    print('Words list:', words_list, '\nLen:', len(words_list))
+    for i in range(len(words_list)):
+        if words_list[i] == 'Học':
+            first_word_index = i # "Học" will always exist and come first
+        elif words_list[i] == 'tập':
+            last_word_index = i
+            break
+    
+    distance = last_word_index - first_word_index + 1 - 2
+    
+    return distance
+
+
+if __name__ == '__main__':
+    distance = measure_words_distance(SENTENCE)
+    print(distance)
