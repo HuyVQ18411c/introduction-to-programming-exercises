@@ -26,5 +26,36 @@ Hãy tìm khoảng cách giữa 2 từ (phải đúng thứ tự) cho trước t
 """
 
 SENTENCE: str = 'Học là một người chăm chỉ, anh ấy luôn cố gắng dành thời gian rảnh của mình  để luyện tập những thói quen tốt trong cuộc sống'
+FIRST_WORD = 'Học'
+SND_WORD = 'tập'
 
+def calculate_document_distance(document: str) -> int:
+    distance: int = 0
+    list_of_words = []
+    word: str = ''
+    first_word_index: int = 0
+    snd_word_index: int = 0
 
+    for i in range(len(document)):
+        if document[i] != ' ':
+            word += document[i]
+            if i <= len(document) - 2:
+                if document[i+1] == ' ':
+                    list_of_words.append(word)
+        else:
+            word = ''
+
+    for k in range(len(list_of_words)):
+        if list_of_words[k] == FIRST_WORD:
+            first_word_index = k
+        if list_of_words[k] == SND_WORD:
+            snd_word_index = k
+
+    distance = snd_word_index - first_word_index - 1
+
+    print(list_of_words)
+    return distance
+
+if __name__ == '__main__':
+    distance = calculate_document_distance(SENTENCE)
+    print(distance)

@@ -32,9 +32,16 @@ def sort(array: list[int]):
 
 
 def main():
-    for array in TEST_DATA:
-        sorted_array = sort(array)
-        print('My final sorted array:', sorted_array)
+    import random
+    large_data_set: list = list(range(10000))
+    random.shuffle(large_data_set)
+    print(large_data_set)
+
+    sorted_array = sort(large_data_set)
+    print('Sorted:', sorted_array)
+    # for array in TEST_DATA:
+    #     sorted_array = sort(array)
+    #     print('My final sorted array:', sorted_array)
 
 
 if __name__ == '__main__':
