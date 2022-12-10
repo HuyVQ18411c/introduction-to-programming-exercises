@@ -2,3 +2,4 @@
 */pycache/*
 *.out
 .vscode
+.idea
