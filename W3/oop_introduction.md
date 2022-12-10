@@ -1,4 +1,4 @@
-# Object oriented programming (OOP - Hướng đối tượng)
+# Object oriented programming (OOP - Hướng đối tượng) (English below)
 ## Định nghĩa
 Lập trình hướng đối tượng là một trong những phương pháp lập trình phổ biến nhất. Khác với functional oriented programming (Lập trình hướng chức năng), với OOP, chúng ta đưa những vật thể có những thuộc tính và phương thức (~~gần~~) giống nhau vào trong một <b>Object</b> để đại diện cho vật thể mà chúng ta nói tới.
 
@@ -40,4 +40,34 @@ Instance: một object (đối tượng) được tạo ra từ lớp.
 
 Constructor (hàm khởi tạo): hàm được gọi để tạo ra các instance của một lớp. 
 
+----------
+## Definition
+Object oriented programming is one of the most common ways to program, it's becomming a coding standard for every applications. Unlike functional oriented programing, OOP collects all the common attributes as well as methods of an object then brings it all to a class, which represent that object.
 
+Ex: Animal
+
+There are many types of animal around the world, each of them have their own unique characteristics and habitats. However, we can generalize many of these attributes.
+
+In OOP world, we can demonstrate all of them in a class.
+```
+# Python
+class Animal:
+    def __init__(self, name: str, num_of_legs: int):
+        self.name: str = name
+        self.num_of_legs: int = num_of_legs
+
+    def eat():
+        eat_something()
+
+    def sleep():
+        print('Go to sleep')
+```
+## Basic concepts:
+
+Attributes: characteristics that describe what does the object look like, which help you distinguish one from other instance of that class.
+
+Methods: common 'actions' of that object.
+
+Instance: object init from a class.
+
+Constructor: a method that will be called on object initiation.
