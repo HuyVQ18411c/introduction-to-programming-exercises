@@ -14,7 +14,6 @@ Enjoy your journey, any contributions and suggestions are welcome!
 ## Contacts:
 
 - **Email**: vuquanghuy2k@gmail.com
+- **Education email**: huyvq.ktl@uel.edu.vn
 - [Github](https://github.com/HuyVQ18411c)
 - [LinkedIn](https://www.linkedin.com/in/huy-vu-dev/)
-
-
