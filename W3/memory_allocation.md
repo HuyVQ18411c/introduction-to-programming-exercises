@@ -1,0 +1,1 @@
+Dynamic and Static memory allocation
