@@ -38,10 +38,19 @@ def run_application():
     app = Application(config=config)
 
     btn = tk.Button(app, text='My Text')
+    btn.pack(fill=tk.X)
 
-    btn.pack()
+    # This element will be invisible
+    # This "Int" will control and pass data throughout application
+    # Normal primitive int can not be used in the same way.
     switch = tk.IntVar(app)
-    switch.set(1)
+    switch.set(0)
+
+    check_btn = tk.Checkbutton(app, text='btn', variable=switch)
+    check_btn.pack()
+
+    txt = tk.Entry(app)
+    txt.pack(fill=tk.X)
 
     app.mainloop()
 
