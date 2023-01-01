@@ -10,6 +10,45 @@ In short:
 #include <stdlib.h>
 
 
+int multipleDimensionDynamicArray(){
+    int i, j;
+
+    char **pnumbers;
+
+    // int* => pointer to int
+    // (int*)* => pointer to a pointer
+    pnumbers = (int **) malloc(3 * sizeof(int*));
+
+    pnumbers[0] = (int *) malloc(1 * sizeof(int));
+    pnumbers[0] = (int *) malloc(2 * sizeof(int));
+    pnumbers[0] = (int *) malloc(3 * sizeof(int));
+
+    pnumbers[0][0] = 1;
+    pnumbers[1][0] = 1;
+    pnumbers[1][1] = 1;
+    pnumbers[2][0] = 1;
+    pnumbers[2][1] = 2;
+    pnumbers[2][2] = 1;
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j <= i; j++) {
+            printf("%d", pnumbers[i][j]);
+        }
+        printf("\n");
+    }
+
+    for (i = 0; i < 3; i++) {
+        // free memory allocated for each row
+        free(pnumbers[i]);
+    }
+
+    /* free the top-level pointer */
+    free(pnumbers);
+
+    return 0;
+}
+
+
 int main(void){
     // Assume that at first we need an array with 3 elements
     int n = 3;

@@ -1,23 +1,56 @@
-/*
-In C we don't have any kind of "class"
-"struct" is the way to go
-*/
 #include <stdio.h>
 
-struct Animal{
-    char *name;
-    int numberOfLegs;
+
+struct point{
+    int width;
+    int height;
 };
 
+typedef struct{
+    int width;
+    int height;
+} point2;
+
+
+int draw(struct point p){
+    for(int h = 0; h < p.height; h++){
+        for(int w = 0; w < p.width; w++){
+            if(w == p.width - 1){
+                printf("*\n");
+            }
+            else{
+                printf("*");
+            }
+        }
+    }
+}
+
+int draw2(point2 p){
+    for(int h = 0; h < p.height; h++){
+        for(int w = 0; w < p.width; w++){
+            if(w == p.width - 1){
+                printf("*\n");
+            }
+            else{
+                printf("*");
+            }
+        }
+    }
+}
+
 int main(void){
-    struct Animal elephant;
+    struct point p;
+    scanf("%d", &p.width);
+    scanf("%d", &p.height);
 
-    char elephantName[8] = {"elephant"};
-    elephant.name = elephantName;
-    elephant.numberOfLegs = 4;
+    draw(p);
 
-    printf("Animal name: %s\n", elephant.name);
-    printf("Number of legs: %d", elephant.numberOfLegs);
-    
+    printf("\n\n");
+
+    point2 p2;
+    p2.width = p.width;
+    p2.height = p.height;
+
+    draw2(p2);
     return 0;
 }

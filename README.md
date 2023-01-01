@@ -11,3 +11,6 @@ Since I'm a beginner in C, these excercises are copied from Hackerrank/Leetcode.
 
 ## Other versions
 The Python and JavaScript version (you can check the branches) where my team and I design our own excercises to practice, since we are more familiar with these languages.
+
+## Resources:
+1. https://www.learn-c.org/en/
