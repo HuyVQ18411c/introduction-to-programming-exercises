@@ -5,20 +5,43 @@ Chúng ta thường thấy các đối tượng Cart (giỏ hàng) và Product (
 
 Hãy thiết kế 2 đối tượng Cart và Product với các attributes và methods sau: 
 Giỏ hàng có thể có những thuộc tính sau: 
-Attributes:
-- Mã giỏ hàng
-- Tổng giá trị của các sản phẩm trong giỏ hàng
-- Sản phẩm có trong giỏ hàng
-Methods:
-- Tính tổng tiền
-- Thêm hàng vào giỏ hàng
+    Attributes:
+    - Mã giỏ hàng
+    - Tổng giá trị của các sản phẩm trong giỏ hàng
+    - Sản phẩm có trong giỏ hàng
+    Methods:
+    - Tính tổng tiền
+    - Thêm hàng vào giỏ hàng
 
 Sản phẩm có thể có những thuộc tính sau:
-- Mã
-- Đơn giá
-- Số lượng
-- Cập nhật giá
-- Cập nhật số lượng
+    Attributes:
+    - Mã
+    - Đơn giá
+    - Số lượng
+    Methods:
+    - Cập nhật giá
+    - Cập nhật số lượng
+----------
+Problem:
+ECommerce application in general there are two "objects" we can easily find which are Cart and Product
+
+Construct 2 classes to create them with the following attributes and methods:
+Cart: 
+    Attributes:
+    - Id
+    - Total price
+    - Products
+    Methods:
+    - Calculate total price
+    - Add product to cart
+Product:
+    Attributes:
+    - Id
+    - Price
+    - Quantity
+    Methods:
+    - Update price
+    - Update quanity
 """
 class Product:
     def __init__(self, id, price, quantity, name) -> None:
