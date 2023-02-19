@@ -1,5 +1,7 @@
-# Introduction to programming
-## Sample test 1
+# Exercises
+- [Tiếng Việt](#vietnamese)
+- [English](#english)
+## Problem set 1 <a name="vietnamese"></a>
 ### Câu 1: Hãy vẽ lưu đồ ứng với bài toán ở câu 5.
 ### Câu 2: Hãy chỉ ra những đoạn code không cần thiết/sai trong chương trình dưới đây code ứng với input và output cho trước.
 ```
@@ -42,4 +44,49 @@ def do_something(input1: int, input2: list[int]):
 
 ### Câu 5: Đọc mô tả bài toán và đưa ra cách tính cách giải phù hợp bằng Python
 ### Cho 3 ma trận hãy tính tích của các ma trận đó
+<hr>
+
+## Problem set 1 <a name="english"></a>
+### Q1. Draw a flow chart for problem in Q5.
+### Q2. Point out redundant/incorrect parts in the following code. Hint: Analyze the input/output of the program and guess how the function works.
+
+```
+Input 1.1: 5
+Input 1.2: [1, 2, 5, 6, 8, 9, 10, 5, 3, 4, 5, 5, 2, 4, 11, -5]
+
+Output 1: 3
+Output 1.1: [2, 7, 10, 11]
+------------
+Input 2.1: 0
+Input 2.2: [0, 19, 13, 3, 0, 8, 4, 15, 11, 1, 18, 12, 2, 14, 0, 16, 17, 7, 9, 10, 0, 6, 5, 0]
+
+Output 2.1: 5
+Output 2.2: [0, 4, 14, 20, 23]
+```
+Code: 
+```
+def do_something(input1: int, input2: list[int]):
+    output1 = len(input2)
+    output2 = []
+
+    if input1 < 0:
+        return # Do nothing
+    
+    for i in range(input2):
+        if input2[i] != input1:
+            output1 -= 1
+        else:
+            output2.append(i + 1)
+
+    print(output1) # print the result
+    print(output2) # print the result
+
+    return output1, output2
+``` 
+### Q3. Analyze the following problem and print to console.
+From the console, user input an integer to determine the length of a side of an isosceles right triangle. Print to the console that triangle.
+### Q4. Resolve the problem below
+Find the longest continuous increase sequence in an array. If 2 adjacent numbers are equal, they still count as members of mentioned sequence.
+### Q5. Calculate sum of 3 matrices.
+
 
