@@ -13,8 +13,15 @@ int counter(){
     return count;
 }
 
+int addOne(){
+    int temp = 10;
+    int count = 1;
+    return temp + count;
+}
+
 int main(void){
     printf("%d\n", counter()); // This should return 1
-    printf("%d", counter()); // This should return 2
+    printf("%d\n", counter()); // This should return 2
+    printf("%d", count);
     return 0;
 }
